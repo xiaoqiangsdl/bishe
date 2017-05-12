@@ -1,7 +1,7 @@
 <template>
   <!-- 小喇叭提示开始 -->
  	<div class="tip">
-	  <i class="iconfont icon-laba"></i>尊敬的客户您好：请您通过时注意安全，请您通过时注意安全，请您通过时注意安全
+	  <i class="iconfont icon-laba"></i>尊敬的客户您好：由于现场人数过多，比较拥挤，请您通过时注意安全
 	</div>
   <!-- 小喇叭提示结束 -->
 </template>

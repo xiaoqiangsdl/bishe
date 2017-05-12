@@ -27,21 +27,21 @@ export default new Router({
     	name: 'menu',
     	component: require('../pages/menu/menu.vue')
     },
-    // {
-    // 	path: '/wall',
-    // 	name: 'wall',
-    // 	component: require('../pages/wall/wall.vue')
-    // },
-    // {
-    // 	path: '/lottery',
-    // 	name: 'lottery',
-    // 	component: require('../pages/lottery/lottery.vue')
-    // },
-    // {
-    // 	path: '/collision',
-    // 	name: 'collision',
-    // 	component: require('../pages/collision/collision.vue')
-    // },
+    {
+    	path: '/wall',
+    	name: 'wall',
+    	component: require('../pages/wall/wall.vue')
+    },
+    {
+    	path: '/lottery',
+    	name: 'lottery',
+    	component: require('../pages/lottery/lottery.vue')
+    },
+    {
+    	path: '/collision',
+    	name: 'collision',
+    	component: require('../pages/collision/collision.vue')
+    },
     // {
     // 	path: '/vote',
     // 	name: 'vote',

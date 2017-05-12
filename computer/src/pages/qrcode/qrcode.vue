@@ -1,19 +1,20 @@
 <template>
   <div class="opactiy-bg">
     <div class="mashow">
-      <img src="../../assets/images/ma.png" class="mashow-ma1">
-      <img src="../../assets/images/ma.png" class="mashow-ma2">
-      <img src="../../assets/images/ma.png" class="mashow-ma3">
+      <img :src="qrimg" class="mashow-ma1">
+      <img :src="qrimg" class="mashow-ma2">
+      <img :src="qrimg" class="mashow-ma3">
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   export default {
-    data () {
-      return {
+    props: {
+      qrimg: {
+        type:  String
       }
-    }
+    },
   }
 </script>
 
