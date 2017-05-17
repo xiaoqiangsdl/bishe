@@ -59,8 +59,9 @@
 
   .sign-list{
     height: 400px;
-    padding: 20px 50px;
-    margin-right: -20px;
+    margin: auto;
+    padding-top: 20px;
+    width: 920px;
     font-size: 0;
     overflow: auto;
   }

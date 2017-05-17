@@ -19,23 +19,11 @@
 	    </div>
 	  </transition>
 		<transition name="fade">
-	    <div class="mask" @click="handleMaskHide" :class="{ active: maskActive }">
+	    <div class="mask" @click="handleMaskHide" v-show="maskActive">
 	      <div class="mask-cont" @click.stop.prevent="">
-	        <div class="skin-item">
-	          <img src="http://bpic.wotucdn.com/11/70/93/49bOOOPIC85_1024.jpg!/fw/780/quality/90/unsharp/true/compress/true" alt="">
-	          <p>红色主题</p>
-	        </div>
-	        <div class="skin-item">
-	          <img src="http://bpic.wotucdn.com/11/70/93/49bOOOPIC85_1024.jpg!/fw/780/quality/90/unsharp/true/compress/true" alt="">
-	          <p>红色主题</p>
-	        </div>
-	        <div class="skin-item">
-	          <img src="http://bpic.wotucdn.com/11/70/93/49bOOOPIC85_1024.jpg!/fw/780/quality/90/unsharp/true/compress/true" alt="">
-	          <p>红色主题</p>
-	        </div>
-	        <div class="skin-item">
-	          <img src="http://bpic.wotucdn.com/11/70/93/49bOOOPIC85_1024.jpg!/fw/780/quality/90/unsharp/true/compress/true" alt="">
-	          <p>红色主题</p>
+	        <div class="skin-item" data-style="http://localhost:3000/static/stylesheets/theme1.css" @click="handleSwitchSkin(index)" v-for="(item, index) in skinList">
+	          <img :src="item.img" alt="">
+	          <p>{{ item.name }}</p>
 	        </div>
 	      </div>
 	    </div>
@@ -45,13 +33,15 @@
 </template>
 
 <script type="text/ecmascript-6">
+  import axios from 'axios';
 
 	export default {
 		data() {
 			return {
 				applyActive: false,
 				screenActive: false,
-				maskActive: false
+				maskActive: false,
+				skinList: []
 			};
 		},
 		methods: {
@@ -101,8 +91,27 @@
 			},
 			handleMaskHide() {
         this.maskActive = false;
+      },
+      handleSwitchSkin(id) {
+      	var skinCss = document.getElementById('skin');
+      	skinCss.href = this.skinList[id].path;
+      	this.maskActive = false;
       }
-		}
+		},
+		mounted() {
+      axios.get('http://localhost:3000/data/read/skin').then(res => {
+        // success callback
+        if (res.status === 200 && res.data.status === 200){
+          this.skinList = res.data.data;
+        }
+      });
+    	var link = document.createElement( "link" );
+  		link.id = "skin"; 
+			link.type = "text/css"; 
+			link.rel = "stylesheet"; 
+			link.href = ''; 
+			document.getElementsByTagName( "head" )[0].appendChild( link ); 
+    }
 	}
 </script>
 
@@ -177,7 +186,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.6);
@@ -211,6 +219,7 @@
     width: 100px;
     height: 80px;
     padding: 3px;
+    object-fit: cover;
     border: 1px solid #ccc;
   }
 

@@ -1,0 +1,48 @@
+body{
+	background: url('http://localhost:3000/static/images/bg2.jpg') top center;
+    background-size: cover;
+}
+
+.header-border-top {
+    background-image: -webkit-linear-gradient(360deg, #ffcc00, rgba(0,0,0,0));
+}
+
+.header-border-bot {
+    background-image: -webkit-linear-gradient(180deg, #ffcc00, rgba(0,0,0,0));
+}
+
+.header-tip,.iconlist-right{
+	border-color: #ffcc00;
+}
+
+.icon-router:hover, .icon-router.active {
+    color: #ffcc00;
+    transition: .5s;
+}
+
+.iconlist-show{
+	background: #ffcc00;
+}
+
+.iconlist-show:after{
+	border-top: 10px solid #ffcc00;
+}
+
+.opactiy-bg{
+	background: rgba(255,255,255,.1);
+	border: 2px solid #fff;
+	border-radius: 5px;
+    box-shadow: 0 0 15px #002aea,inset 0 0 15px #002aea;
+}
+
+.opactiy-md-bg{
+	background: rgba(255,255,255,.1);
+	border: 2px solid #fff;
+	border-radius: 5px;
+    box-shadow: 0 0 15px #002aea,inset 0 0 15px #002aea;
+}
+
+
+.mashow img{
+	box-shadow: 2px 2px 7px #ddd;
+}	

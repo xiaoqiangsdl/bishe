@@ -1,0 +1,168 @@
+body{
+	background: url('http://localhost:3000/static/images/bg3.jpg') top center;
+    background-size: cover;
+}
+
+.header-cont{
+	position: relative;
+}
+
+.header-cont:before{
+	content: '';
+	position: absolute;
+	display: block;
+	top: 10px;
+	width: 243px;
+	height: 60px;
+	background: url(http://localhost:3000/static/images/logo3.png);
+	background-size: 100% 100%;
+}
+
+.header-border-top {
+    background-image: -webkit-linear-gradient(360deg, #b41515, rgba(0,0,0,0));
+}
+
+.header-border-bot {
+    background-image: -webkit-linear-gradient(180deg, #b41515, rgba(0,0,0,0));
+}
+
+.header-tip,.iconlist-right{
+	border-color: #b41515;
+}
+
+.header-cont,.tip {
+	color: #b41515;
+}
+
+.icon-router:hover, .icon-router.active {
+    color: #222;
+    transition: .5s;
+}
+
+.iconlist-right {
+  border-color: #b41515;
+	background: rgba(255,255,255,.4);
+	color: #b41515;
+	font-weight: bold;
+}
+
+.iconlist-show{
+	background: #b41515;
+}
+
+.iconlist-show:after{
+	border-top: 10px solid #b41515;
+}
+
+.header-logo{
+	visibility: hidden;
+}
+
+.opactiy-bg{
+	background: rgba(255,255,255,.3);
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #b41515;
+}
+
+
+.opactiy-md-bg{
+	background: rgba(255,255,255,.3);
+	border: 2px solid #fff;
+	border-radius: 5px;
+	color: #b41515;
+}
+
+
+.mashow img{
+	box-shadow: 2px 2px 7px #ddd;
+}	
+
+.cmt-right{
+	margin-left: 0;
+	padding: 20px;
+	padding-left: 120px;
+	background: rgba(255,255,255,.3);
+	border: 2px solid #b41515;
+	border-radius: 5px;
+}
+
+/*头像变大一点点*/
+.cmt-item .headpic {
+	position: relative;
+    float: left;
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-top: 22px;
+    margin-left: 18px;
+    border-radius: 45px;
+}
+
+.cmt-avatar:after{
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 30px;
+	width: 60px;
+	height: 60px;
+
+	background: url(http://localhost:3000/static/images/maozi.png) center center no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+.cmt-item .headpic img{
+	border-radius: 45px;
+}
+
+/*右边距小一点点*/
+.cmt-list{
+	padding-right: 50px;
+}
+
+.cmt-item{
+	border:none;
+}
+
+.danmuitem .cont{
+	color: #b41515 !important;
+}
+
+.cmt-item:before{
+	background: none;
+}
+
+.cmt-dialog{
+	background: none;
+	font-size: 32px;
+	line-height: 1.8;
+}
+
+.cmt-dialog:before{
+	border: none;
+}
+
+.lottery-head{
+	background: rgba(180,21,21,.15);
+	-webkit-background-size: 40px;
+	background-size: 40px;
+}
+
+.btn-color{
+	color: #fff;
+	background: #b41515;
+}
+
+.blue2-btn{
+	color: #fff;
+	background: #ff7e7e;
+}
+
+.blue2-bg{
+	background: rgba(180,21,21,.7);
+}
+
+.blue2-head,.blue2-th,.blue2-item,.blue2-item2{
+	border-color: #e18ba5;
+}

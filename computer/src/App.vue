@@ -41,7 +41,7 @@
           // success callback
           if (res.status === 200 && res.data.status === 200){
             if (self.usernum !== res.data.data) self.usernum = res.data.data;
-            console.log(res.data.data);
+            // console.log(res.data.data);
           }
         });
       },1000);
@@ -63,7 +63,7 @@
     width: 100%;
     height: 100%;
     background: url(assets/images/bg.jpg) top center;
-    background-size: cover;
+    background-size: 1024px;
   }
 
   .main{

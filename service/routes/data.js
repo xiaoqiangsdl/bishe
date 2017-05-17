@@ -65,7 +65,6 @@ router.get('/img/:id', (req, res, next) => {
 	});
 });
 
-
 /***
  * 写入数据模块
  * data/write/user

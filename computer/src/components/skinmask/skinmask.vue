@@ -2,19 +2,19 @@
   <transition name="fade">
     <div class="mask" @click="handleHide" :class="{ active: maskActive }">
       <div class="mask-cont" @click.stop.prevent="">
-        <div class="skin-item">
+        <div class="skin-item" data-style="http://localhost:3000/static/stylesheets/theme1.css" @click="handleSwitchSkin">
           <img src="http://bpic.wotucdn.com/11/70/93/49bOOOPIC85_1024.jpg!/fw/780/quality/90/unsharp/true/compress/true" alt="">
           <p>红色主题</p>
         </div>
-        <div class="skin-item">
+        <div class="skin-item" data-style="http://localhost:3000/static/stylesheets/theme1.css" @click="handleSwitchSkin">
           <img src="http://bpic.wotucdn.com/11/70/93/49bOOOPIC85_1024.jpg!/fw/780/quality/90/unsharp/true/compress/true" alt="">
           <p>红色主题</p>
         </div>
-        <div class="skin-item">
+        <div class="skin-item" data-style="http://localhost:3000/static/stylesheets/theme1.css" @click="handleSwitchSkin">
           <img src="http://bpic.wotucdn.com/11/70/93/49bOOOPIC85_1024.jpg!/fw/780/quality/90/unsharp/true/compress/true" alt="">
           <p>红色主题</p>
         </div>
-        <div class="skin-item">
+        <div class="skin-item" data-style="http://localhost:3000/static/stylesheets/theme1.css" @click="handleSwitchSkin">
           <img src="http://bpic.wotucdn.com/11/70/93/49bOOOPIC85_1024.jpg!/fw/780/quality/90/unsharp/true/compress/true" alt="">
           <p>红色主题</p>
         </div>
@@ -24,16 +24,35 @@
 </template>
 
 <script>
+  import axios from 'axios';
   export default {
     props: {
       maskActive: {
         type:  Boolean
       }
     },
+    data() {
+      return (){
+        skinList: []
+      }
+    },
     methods: {
       handleHide() {
         this.maskActive = false;
+      },
+      handleSwitchSkin() {
+
       }
+    },
+    mounted() {
+      console.log(skinList)
+      axios.get('http://localhost:3000/data/read/skin').then(res => {
+        // success callback
+        if (res.status === 200 && res.data.status === 200){
+          this.skinList = res.data.data;
+          console.log(skinList)
+        }
+      });
     }
   }
 </script>

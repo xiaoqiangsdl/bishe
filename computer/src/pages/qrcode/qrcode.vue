@@ -31,7 +31,7 @@
   }
 
   .mashow-ma2{
-    width:285px;
+    width:280px;
     margin-right: 18px;
   }
 

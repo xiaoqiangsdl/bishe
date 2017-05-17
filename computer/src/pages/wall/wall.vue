@@ -4,12 +4,12 @@
       <ul class="cmt-list">
         <li class="cmt-item clearfloat" v-for="(item, index) in cmtList">
           <div class="cmt-avatar">
-            <img :src="item.avatar" alt="">
+            <img :src="item.avatar" class="headpic">
           </div>
           <div class="cmt-right">
             <div class="cmt-dialog">
               <div class="cmt-dialog-text">
-                {{ item.comment }}
+                <b>{{ item.name }}</b>: {{ item.comment }}
               </div>
             </div>
           </div>
@@ -132,5 +132,9 @@
     width: 175px;
     height: 175px;
     margin-right: 12px;
+  }
+
+  .cmt-dialog-text b{
+    font-size: 35px;
   }
 </style>

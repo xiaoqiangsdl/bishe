@@ -111,6 +111,10 @@ height: 0;
 	z-index: 10;
 }
 
+.mask.active{
+	display: block;
+}
+
 
 /* @ 一般样式
 -------------------------------------*/
@@ -153,6 +157,15 @@ height: 0;
 	margin-top: .25rem;
 	vertical-align: top;
 	background-image: url(./../images/home.png);
+}
+
+.icon-ma{
+	display: inline-block;
+	width: .56rem;
+	height: .56rem;
+	margin-top: .25rem;
+	vertical-align: top;
+	background-image: url(./../images/ma2.png);
 }
 /* @ 动画
 -------------------------------------*/
